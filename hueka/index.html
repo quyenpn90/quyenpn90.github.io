@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hueka — Colour Mixing Lab</title>
+<meta name="description" content="Hueka mixes colour with real paint physics, not RGB averages. Support and contact page.">
+<style>
+  :root { color-scheme: light dark; }
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+       max-width:680px;margin:0 auto;padding:40px 20px 64px;line-height:1.65;
+       color:#171a18;background:#eeefea}
+  @media (prefers-color-scheme:dark){body{color:#e9ece6;background:#131512}}
+  h1{font-size:2rem;margin:0 0 .1rem;letter-spacing:-.02em}
+  h2{font-size:1.1rem;margin-top:2.2rem;margin-bottom:.4rem}
+  .tag{color:#6b716b;margin:0 0 1.4rem}
+  @media (prefers-color-scheme:dark){.tag{color:#9ca39a}}
+  .bar{height:4px;border-radius:99px;margin:0 0 28px;
+       background:linear-gradient(90deg,#4B0082,#2E2EFF,#00A6D6,#00B84A,#EDE100,#F58A00,#D31B1B)}
+  a{color:#14776b}
+  @media (prefers-color-scheme:dark){a{color:#4fd8bb}}
+  ul{padding-left:1.1rem}
+  li{margin:.35rem 0}
+  .card{background:#fff;border:1px solid #d8dad4;border-radius:14px;padding:16px 18px;margin:14px 0}
+  @media (prefers-color-scheme:dark){.card{background:#1c1f1c;border-color:#2d3129}}
+  code{background:#0000000d;padding:1px 5px;border-radius:5px;font-size:.9em}
+  @media (prefers-color-scheme:dark){code{background:#ffffff14}}
+  footer{margin-top:3rem;padding-top:1.2rem;border-top:1px solid #d8dad4;font-size:.9rem;color:#6b716b}
+  @media (prefers-color-scheme:dark){footer{border-color:#2d3129;color:#9ca39a}}
+</style>
+</head>
+<body>
+
+  <h1>Hueka</h1>
+  <p class="tag">See how colours really mix.</p>
+  <div class="bar"></div>
+
+  <p>Most colour-mixing apps average RGB values. That tells you blue and yellow
+  make grey. Real paint makes green.</p>
+
+  <p>Hueka mixes the way paint actually mixes: every pigment is a reflectance
+  curve sampled across the visible spectrum, blended with Kubelka–Munk
+  subtractive theory and converted to screen colour through the CIE 1931
+  observer. Every mix comes with an explanation of why it turned out that way.</p>
+
+  <h2>Three modes</h2>
+  <ul>
+    <li><strong>Simple</strong> — six colours, tap to mix, get the result and its
+      name straight away.</li>
+    <li><strong>Studio</strong> — eight named pigments, mixing by parts, and a
+      full breakdown of what each pigment did.</li>
+    <li><strong>Challenge</strong> — match a target colour, scored on the CIE76
+      colour distance.</li>
+  </ul>
+
+  <h2>Support</h2>
+  <div class="card">
+    <p style="margin-top:0">Questions, bug reports, or a colour that came out
+    wrong? Email <a href="mailto:quyenpn1115@gmail.com">quyenpn1115@gmail.com</a>
+    and include your device model and iOS version.</p>
+    <p style="margin-bottom:0">We usually reply within a few days.</p>
+  </div>
+
+  <h2>Common questions</h2>
+
+  <p><strong>Why is my green duller than the one in the tube?</strong><br>
+  Because that is what happens with real paint. Mixing is subtractive: it can
+  only ever remove light, never add it. Ultramarine absorbs part of the green
+  band, so a blue-plus-yellow green will always be muted. Studio mode will
+  suggest a cleaner pigment when it detects this.</p>
+
+  <p><strong>Why does everything turn brown when I add a third colour?</strong><br>
+  Each pigment absorbs its own slice of the spectrum. Three of them together
+  absorb almost everything, so the result drifts toward a dark neutral. Not a
+  bug — it is the classic muddy puddle in the middle of a palette.</p>
+
+  <p><strong>Do the colours match real paint exactly?</strong><br>
+  No. The pigment curves are plausible stand-ins for real paint, not spectrometer
+  measurements. Hueka is a good teacher, not a colour-matching tool.</p>
+
+  <p><strong>Does the app work offline?</strong><br>
+  Yes. Every mix is computed on your device.</p>
+
+  <h2>Privacy</h2>
+  <p>The app does not ask you to create an account, and the colours you mix are
+  never sent anywhere. Ads are provided by Google AdMob; the full details are in
+  the <a href="privacy.html">privacy policy</a>.</p>
+
+  <footer>
+    Hueka · <a href="privacy.html">Privacy policy</a> ·
+    <a href="mailto:quyenpn1115@gmail.com">Contact</a>
+  </footer>
+
+</body>
+</html>
